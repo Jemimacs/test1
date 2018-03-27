@@ -1,0 +1,34 @@
+<!DOCTYPE hytml>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1">
+	<link rel=stylesheet href=me/jquery.mobile-1.4.5.css />
+	<script src=me/jquery.js></script>
+	<script src=me/jquery.mobile-1.4.5.js></script>
+	<script type = 'text/javascript'>
+	</script>
+	<script>
+		function rgb()
+		{
+			var input1 = document.getElementById('warna').value
+			document.getElementById("edit").style.color = input1;
+		}
+	</script>
+</head>
+<body>
+	<div data-role=page id=win1>
+		<div data-role=header>
+			<h1> Test 1 </h1>
+		</div>
+		<div data-role=content>
+			Masukkan kode warna: <input type="text" id=warna onchange="rgb()">
+			<input type="text" id=edit value="lorem ipsum">
+		</div>
+		<div data-role=footer data-position=fixed>
+			<h1> Jemima - 26416042 </h1>
+		</div>
+	</div>
+</body>
+</html>

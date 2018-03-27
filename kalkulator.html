@@ -1,0 +1,41 @@
+<!DOCTYPE hytml>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1">
+	<link rel=stylesheet href=me/jquery.mobile-1.4.5.css />
+	<script src=me/jquery.js></script>
+	<script src=me/jquery.mobile-1.4.5.js></script>
+	<script type = 'text/javascript'>
+	</script>
+	<script>
+		function calculate()
+		{
+			var input1 = document.getElementById('angka1').value
+			var input2 = document.getElementById('angka2').value
+			var hasil = (Math.pow(input1,input2))
+			document.getElementById("pangkat").innerHTML = hasil;
+		}
+	</script>
+</head>
+<body>
+	<div data-role=page id=win1>
+		<div data-role=header>
+			<h1> Test 1 </h1>
+		</div>
+		<div data-role=content>
+			Masukkan bilangan yang ingin dipangkat: <input type="text" id=angka1>
+			Masukkan pagkat: <input type="text" id=angka2>
+			<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" onclick="calculate()">Hasil</a>
+			<div data-role="popup" id="popupBasic">
+				<p id="pangkat">-</p>
+			</div>
+			
+		</div>
+		<div data-role=footer data-position=fixed>
+			<h1> Jemima - 26416042 </h1>
+		</div>
+	</div>
+</body>
+</html>
