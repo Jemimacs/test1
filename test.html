@@ -1,0 +1,36 @@
+<!DOCTYPE hytml>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1">
+	<link rel=stylesheet href=me/jquery.mobile-1.4.5.css />
+	<script src=me/jquery.js></script>
+	<script src=me/jquery.mobile-1.4.5.js></script>
+</head>
+<body>
+	<div data-role=page id=win1>
+		<div data-role=header>
+			<h1> Window 1 </h1>
+		</div>
+		<div data-role=content>
+			<p> Window content 1</p>
+			<a href=#win2 data-transition=slide> Go to window 2 </a>
+		</div>
+		<div data-role=footer data-position=fixed>
+			<h1> Window bottom </h1>
+		</div>
+	</div>
+	<div data-role=page id=win2>
+		<div data-role=header data-add-back-btn="true">
+			<h1> Window 2 </h1>
+		</div>
+		<div data-role=content>
+			<p> Window content 2 </p>
+		</div>
+		<div data-role=footer data-position=fixed>
+			<h1> Window bottom </h1>
+		</div>
+	</div>
+</body>
+</html>
