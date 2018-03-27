@@ -13,6 +13,9 @@
 		function rgb()
 		{
 			var input1 = document.getElementById('warna').value
+			if (input1 === " ") { alert("Please fill the color") }
+		    if (input1 === "inherit") {alert("Not inherit color")}
+		    if (input1 === "transparent") {alert("Please input not the transparent color")}
 			if(!isNaN(input1))
 			{
 				document.getElementById("edit").style.color = input1;	
@@ -32,6 +35,7 @@
 			<h1> Test 1 </h1>
 		</div>
 		<div data-role=content>
+			<a href="D:/PPM/test/test.html" data-transition=slide> Go to Main Menu</a><br>
 			Masukkan kode warna: <input type="text" id=warna onchange="rgb()">
 			<input type="text" id=edit value="lorem ipsum">
 			<form>
