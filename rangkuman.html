@@ -7,15 +7,6 @@
 	<link rel=stylesheet href=me/jquery.mobile-1.4.5.css />
 	<script src=me/jquery.js></script>
 	<script src=me/jquery.mobile-1.4.5.js></script>
-	<script type = 'text/javascript'>
-	</script>
-	<script>
-		function rgb()
-		{
-			var input1 = document.getElementById('warna').value
-			document.getElementById("edit").style.color = input1;
-		}
-	</script>
 </head>
 <body>
 	<div data-role=page id=win1>
@@ -23,72 +14,88 @@
 			<h1> Test 1 </h1>
 		</div>
 		<div data-role=content>
+			<a href="D:/PPM/test/test.html" data-transition=slide> Go to Main Menu</a><br>
 			<h1>RANGKUMAN</h1><br><br>
-			RANGKUMAN GIT
-git init: untuk inisialisasi git repository (membuat repository baru yang masih kosong). repository adalah hidden directory ketika git berjalan
-
-git status: melihat status project saat ini, melihat perubahan - perubahan yang terjadi pada respository
-
-ketika muncul info (file) is "untracked" -> artinya file tersebut adalah file baru
-
-git add
-ketika mau melakukan perubahan pada suatu file / project, maka project harus dimasukkan pada stage area (staging area) menggunakan command -> git add namafile
-ex: git add octocat.txt
-
-git add '*.jenisfile' : untuk menambahkan file-file dengan tipe yang sama
-
-
-git commit
-File yang dirubah masih berada pada staging area, masih belum tersimpan di respository.
-File dapat diubah (add, remove) di dalam stage area sebelum dimasukkan ke respository.
-Untuk menyimpan perubahan yang dilakukan di dalam stage, gunakan command -> git commit -m "isi pesan"
--m : message
-
-git log: melihat history dari commit yang dilakukan (urut)
-
-git remote add remotename respositoryURL:
-untuk memasukkan (push) local repo ke GitHub server, diperlukan remote respository.
-ex: git remote add origin https://github.com/try-git/try_git.git
-
-memasukkan perubahan local ke origin repo (di GitHub)
-git push -u remotename default_local_branch_name: untuk memberi tahu git, tempat meletakkan commit yang dilakukan
-ex: git push -u origin master
-
-git pull origin master : untuk cek segala perubahan di GitHub respository dan pull down segala perubahan yang dilakukan
-
-git diff: melihat perbedaan yang terjadi
-git diff HEAD: untuk melihat perbedaan yang terjadi pada commit yang paling terakhir
-penggunaan diff lainnya adalah dapat melihat perubahan pada files yang sudah ada di staged
-staged files adalah file yang ready to be committed
-
-git diff --staged: melihat perubahan yang terjadi di staged
-
-git reset namafile: remove file tersebut dari stage (unstage)
-
-git checkout -- targetfile: untuk mengembalikan file ke kondisi saat commit terakhir dilakukan
-
-BRANCH
-ketika membuat program, biasanya developer akan membuat copy dari program yang dibuat (membuat branch). tiap branch dapat di commit secara terpisah. dan branch-branch dapat digabungkan kembali pada main master branch nya.
-commandnya adalah git branch namabranch
-
-git checkout namabranch_yang_mau_diswitch: untuk men-switch branch yang ada. maksud dari checkout, kita set posisi kita di branch yang diswitch tersebut.
-
-git rm: menghapus file yang diinginkan pada branch
-ex: git rm '*.txt'
-
-git rm -r 'namafile'
--r: recursive
-git merge namabranch_yang_ingin_di_merge: menggabungkan branch ke main branch
-Sebelum melakukan merge branch, posisikan pointer di main branch dulu. dengan command-> git checkout namamasterbranch
-
-Setelah menggabungkan branch dengan main branch, branch dapat dihapus. dengan command
-git branch -d branchname: menghapus branch yang diingingkan (sesuai branchname)
-
-git push: memasukkan / push semua yang telah dikerjakan ke remote respository
-
-catatan tambahan:
-single quote dan double quotes sama.
-
+			<h3>Nb: this page is using Custom responsive grid </h3>
+			<div class="rwd-example">
+			    <!-- Lead story block -->
+			    <div class="ui-block-a">
+			        <div class="ui-body ui-body-d">
+			           <br>git init: untuk inisialisasi git repository (membuat repository baru yang masih kosong). repository adalah hidden directory ketika 			git berjalan
+						<br>
+						git status: melihat status project saat ini, melihat perubahan - perubahan yang terjadi pada respository
+						<br>
+						ketika muncul info (file) is "untracked" -> artinya file tersebut adalah file baru
+						<br>
+						git add<br>
+						ketika mau melakukan perubahan pada suatu file / project, maka project harus dimasukkan pada stage area (staging area) menggunakan command -> git add namafile
+						ex: git add octocat.txt
+						<br>
+						git add '*.jenisfile' : untuk menambahkan file-file dengan tipe yang sama
+						<br>
+						<br>
+						git commit<br>
+						File yang dirubah masih berada pada staging area, masih belum tersimpan di respository.
+						<br>File dapat diubah (add, remove) di dalam stage area sebelum dimasukkan ke respository.
+						<br>Untuk menyimpan perubahan yang dilakukan di dalam stage, gunakan command -> git commit -m "isi pesan"
+						-m : message
+						<br>
+						git log: melihat history dari commit yang dilakukan (urut)
+						<br>
+			        </div>
+			    </div>
+			    <!-- secondary story block #1 -->
+			    <div class="ui-block-b">
+			        <div class="ui-body ui-body-d">
+						git remote add remotename respositoryURL:
+						untuk memasukkan (push) local repo ke GitHub server, diperlukan remote respository.
+						<br>ex: git remote add origin https://github.com/try-git/try_git.git
+						memasukkan perubahan local ke origin repo (di GitHub)
+						<br>git push -u remotename default_local_branch_name: untuk memberi tahu git, tempat meletakkan commit yang dilakukan
+						<br>ex: git push -u origin master
+						<br>
+						git pull origin master : untuk cek segala perubahan di GitHub respository dan pull down segala perubahan yang dilakukan
+						<br>
+						git diff: melihat perbedaan yang terjadi
+						<br>git diff HEAD: untuk melihat perbedaan yang terjadi pada commit yang paling terakhir
+						penggunaan diff lainnya adalah dapat melihat perubahan pada files yang sudah ada di staged
+						staged files adalah file yang ready to be committed
+						<br>
+						git diff --staged: melihat perubahan yang terjadi di staged
+						<br>
+						git reset namafile: remove file tersebut dari stage (unstage)
+						<br>
+						git checkout -- targetfile: untuk mengembalikan file ke kondisi saat commit terakhir dilakukan
+						<br>
+						BRANCH
+						<br>ketika membuat program, biasanya developer akan membuat copy dari program yang dibuat (membuat branch). tiap branch dapat di commit secara terpisah. dan branch-branch dapat digabungkan kembali pada main master branch nya.
+						commandnya adalah git branch namabranch
+						<br>
+						git checkout namabranch_yang_mau_diswitch: untuk men-switch branch yang ada. maksud dari checkout, kita set posisi kita di branch yang diswitch tersebut.
+						<br>
+			        </div>
+			    </div>
+			    <!-- secondary story block #2 -->
+			    <div class="ui-block-c">
+			        <div class="ui-body ui-body-d">	            
+						git rm: menghapus file yang diinginkan pada branch
+						ex: git rm '*.txt'
+						<br>
+						git rm -r 'namafile'
+						-r: recursive
+						<br>git merge namabranch_yang_ingin_di_merge: menggabungkan branch ke main branch
+						<br>Sebelum melakukan merge branch, posisikan pointer di main branch dulu. dengan command-> git checkout namamasterbranch
+						<br>
+						Setelah menggabungkan branch dengan main branch, branch dapat dihapus. dengan command
+						<br>git branch -d branchname: menghapus branch yang diingingkan (sesuai branchname)
+						<br>
+						git push: memasukkan / push semua yang telah dikerjakan ke remote respository
+						<br>
+						catatan tambahan:
+						<br>single quote dan double quotes sama.
+			        </div>
+			    </div>
+			</div><!-- /rwd-example -->
 		</div>
 		<div data-role=footer data-position=fixed>
 			<h1> Jemima - 26416042 </h1>
