@@ -13,7 +13,16 @@
 		function rgb()
 		{
 			var input1 = document.getElementById('warna').value
-			document.getElementById("edit").style.color = input1;
+			if(!isNaN(input1))
+			{
+				document.getElementById("edit").style.color = input1;	
+			}
+			else
+				alert("Please input the RGB color")
+		}
+		function rating()
+		{
+			alert("Thankyou for rating!")
 		}
 	</script>
 </head>
@@ -25,6 +34,11 @@
 		<div data-role=content>
 			Masukkan kode warna: <input type="text" id=warna onchange="rgb()">
 			<input type="text" id=edit value="lorem ipsum">
+			<form>
+			    <label for="slider-1">Please rating for this web</label>
+			    <input type="range" name="slider-1" id="slider-1" min="0" max="100" value="50">
+				<button type = "button" id = "submit" value = "" onclick = "rating()" style = "height:30px; width:500px; background-color: white; font-size: 10px;">Submit your rating</button>
+			</form>
 		</div>
 		<div data-role=footer data-position=fixed>
 			<h1> Jemima - 26416042 </h1>
